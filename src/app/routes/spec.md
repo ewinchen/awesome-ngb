@@ -1,0 +1,27 @@
+# routes 目录规范
+
+* 严格区分文件夹的性质，一个文件夹只定义一种属性，要不就是Module，要不就是Compoent，要不就是Directive，不要混合在一起。
+
+* 没有routing的Moduel为同步加载的Feature Module，作用是打包Declarations。 注意，如果Feauture Module里面的Declarations通用性很强，应该移到shared目录下。
+
+* 有routing的Module为异步加载的Feature Module，事实上就是把上级Module的entry component的配置交给这个Lazy Module
+
+* Component的所属Module在Component文件夹的同级目录下
+
+* LayoutModule和EagerModule的说明
+
+这种情况主要是处理Module里面有Entry Component，同时地，这个Entry Component会包含多个其他相关的Component，这样打包归类到同一个Module方便管理。
+
+如LayoutModule，作为Entry Component的MainLayoutComponent包含了其他Header, Footer的component，可以把它们放到同一个Module里面。
+
+其是这些Module的作用就是打包一些Component，使用的时候肯定是要Import的，只是如果是Entry Component的话，就不须要Export而已了。
+
+所以，无论什么时候，只要你愿意，component都可以单独地放到新的Module里面，尽管这个Module就只有一个Component。
+
+这样Module的意义就很明显了，就是为了宣誓主权，某某Declaration就是我的。想用的话有两种方法：
+
+一个是你很饿，那就直接import我拿去用吧，
+
+一个是你很懒，那就把路由配置交给我，我来自己导航吧！
+
+* 有一种情况，就是子component是否应该放在父component的目录下呢？根据Component的所属Module在Component文件夹的同级目录下这个原则，我建议是把子component放在父component的同一个目录下，跟父component同一级别，这样component跟Module的关系更清晰

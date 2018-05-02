@@ -6,7 +6,6 @@ import { RoutesModule } from './routes/routes.module';
 
 import { AppComponent } from './app.component';
 
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -14,7 +13,7 @@ import { AppComponent } from './app.component';
   imports: [
     BrowserModule,
     CoreModule,
-    RoutesModule
+    RoutesModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

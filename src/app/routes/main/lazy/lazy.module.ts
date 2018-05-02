@@ -7,7 +7,7 @@ import { SleepingComponent } from './sleeping/sleeping.component';
 @NgModule({
   imports: [
     CommonModule,
-    LazyRoutingModule
+    LazyRoutingModule,
   ],
   declarations: [SleepingComponent]
 })
