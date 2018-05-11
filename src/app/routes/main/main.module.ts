@@ -6,7 +6,7 @@ import { MainRoutingModule } from './main-routing.module';
 import { HelloComponent } from './hello/hello.component';
 import { GoodbyeComponent } from './goodbye/goodbye.component';
 
-import { LayoutModule } from './layout/layout.module';
+import { LayoutModule } from '../../layout/layout.module';
 import { EagerModule } from './eager/eager.module';
 
 
