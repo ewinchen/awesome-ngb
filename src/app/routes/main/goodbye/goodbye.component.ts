@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GoodbyeComponent implements OnInit {
 
+  isCollapsed = true;
+
   constructor() { }
 
   ngOnInit() {
