@@ -13,12 +13,16 @@ export class PostsComponent implements OnInit {
       content: 'You are the best, just go ahead!'
     },
     {
+      title: 'Be Healthy',
+      content: 'What can you do like a sick cat?'
+    },
+    {
       title: 'Keep Learning',
-      content: 'Stay hungery, stay foolish'
+      content: 'Stay hungery, stay foolish.'
     },
     {
       title: 'Keep Fighting',
-      content: 'Someone die in peace'
+      content: 'Someone dies in peace.'
     },
   ];
 
