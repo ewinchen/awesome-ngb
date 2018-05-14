@@ -6,8 +6,12 @@ import { NotFoundComponent } from './not-found/not-found.component';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'main',
+    redirectTo: 'blog',
     pathMatch: 'full'
+  },
+  {
+    path: 'blog',
+    loadChildren: 'src/app/routes/blog/blog.module#BlogModule'
   },
   {
     path: 'main',
