@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { PostsComponent } from './posts/posts.component';
+import { PostListComponent } from './posts/post-list/post-list.component';
+import { PostComponent } from './posts/post/post.component';
 import { AboutComponent } from './about/about.component';
 import { BlogLayoutComponent } from '../../layout/blog-layout/blog-layout.component';
 
@@ -16,11 +17,15 @@ const routes: Routes = [
       },
       {
         path: 'posts',
-        component: PostsComponent
+        component: PostListComponent
       },
       {
         path: 'about',
         component: AboutComponent
+      },
+      {
+        path: 'post/:id',
+        component: PostComponent
       }
     ]
   },

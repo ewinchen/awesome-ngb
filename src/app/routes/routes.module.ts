@@ -11,7 +11,7 @@ import { RoutesRoutingModule } from './routes-routing.module';
     RoutesRoutingModule
   ],
   declarations: [
-    NotFoundComponent
+    NotFoundComponent,
   ],
   exports: [RoutesRoutingModule]
 })

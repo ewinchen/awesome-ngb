@@ -1,0 +1,6 @@
+<div class="container">
+  <app-carousel></app-carousel>
+  <ng-container *ngFor="let post of posts">
+    <app-post-preview [title]="post.title" [content]="post.content"></app-post-preview>
+  </ng-container>
+</div>
