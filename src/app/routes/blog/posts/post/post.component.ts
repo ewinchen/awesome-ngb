@@ -1,8 +1,8 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
-import { Post, PostStructure } from './post';
+import { Post } from './post';
 import { PostService } from './post.service';
-import { Subscription } from 'rxjs';
+import { Subscription, Observable } from 'rxjs';
 
 @Component({
   selector: 'app-post',
@@ -11,17 +11,20 @@ import { Subscription } from 'rxjs';
 })
 export class PostComponent implements OnInit, OnDestroy {
 
-  post: PostStructure;
-  fetchPost$: Subscription;
+  post: Post;
+  fetchPostSub: Subscription;
+  fetchPost$: Observable<Post>;
 
   constructor(private router: Router, private route: ActivatedRoute, private postService: PostService) { }
 
   ngOnInit() {
-    this.fetchPost$ = this.postService.fetchPost().subscribe(post => this.post = post);
+    this.fetchPostSub = this.postService.fetchPost().subscribe(post => this.post = post);
+    this.fetchPost$ = this.postService.fetchPost();
   }
 
   ngOnDestroy() {
-    this.fetchPost$.unsubscribe();
+    this.fetchPost$ = null;
+    this.fetchPostSub.unsubscribe();
   }
 
 }

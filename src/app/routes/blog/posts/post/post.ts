@@ -1,4 +1,4 @@
-export class Post implements PostStructure {
+export class Post {
   constructor(
     public title: string,
     public content: string,
@@ -8,10 +8,3 @@ export class Post implements PostStructure {
   }
 }
 
-export interface PostStructure {
-  title: string;
-  content: string;
-  tag: Array<string>;
-  createAt: Date;
-  lastModifiedAt: Date;
-}
