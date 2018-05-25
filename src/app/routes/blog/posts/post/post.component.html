@@ -17,5 +17,7 @@
     <span>Create Date: {{(fetchPost$ | async)?.createAt | date: 'yyyy-MM-dd HH:mm:ss'}}</span>
     <span>Last Modified Date: {{(fetchPost$ | async)?.lastModifiedAt | date}}</span>
   </div>
-  <a [routerLink]="['../../posts']">back</a>
+  <a [routerLink]="['../../../posts']">back</a>
+
+  {{count$ | async}}
 </div>

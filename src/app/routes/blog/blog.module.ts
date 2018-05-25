@@ -8,6 +8,8 @@ import { BlogRoutingModule } from './blog-routing.module';
 import { PostsModule } from './posts/posts.module';
 import { AboutComponent } from './about/about.component';
 
+import { CounterService } from "./posts/di/counter.service";
+
 
 @NgModule({
   imports: [
@@ -17,6 +19,7 @@ import { AboutComponent } from './about/about.component';
     SharedModule,
     PostsModule
   ],
+  providers: [CounterService],
   declarations: [AboutComponent]
 })
 export class BlogModule { }

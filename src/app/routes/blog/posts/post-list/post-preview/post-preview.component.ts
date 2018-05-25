@@ -1,4 +1,10 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { Store, select } from "@ngrx/store";
+import { Observable } from 'rxjs';
+
+interface AppState {
+  count: number;
+}
 
 @Component({
   selector: 'app-post-preview',
@@ -10,7 +16,11 @@ export class PostPreviewComponent implements OnInit {
   @Input() title: string;
   @Input() content: string;
 
-  constructor() { }
+  count$: Observable<number>;
+
+  constructor(store: Store<AppState>) {
+    this.count$ = store.pipe(select('count'));
+  }
 
   ngOnInit() {
   }

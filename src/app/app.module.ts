@@ -5,6 +5,7 @@ import { CoreModule } from './core/core.module';
 import { RoutesModule } from './routes/routes.module';
 
 import { AppComponent } from './app.component';
+import { StoreModule } from '@ngrx/store';
 
 @NgModule({
   declarations: [
@@ -14,6 +15,7 @@ import { AppComponent } from './app.component';
     BrowserModule,
     CoreModule,
     RoutesModule,
+    StoreModule.forRoot({})
   ],
   providers: [],
   bootstrap: [AppComponent]
