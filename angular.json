@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "ng6": {
+    "awesome-ngb": {
       "root": "",
       "projectType": "application",
       "prefix": "app",
@@ -25,7 +25,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/ng6",
+            "outputPath": "dist/awesome-ngb",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -70,18 +70,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "ng6:build"
+            "browserTarget": "awesome-ngb:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "ng6:build:production"
+              "browserTarget": "awesome-ngb:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "ng6:build"
+            "browserTarget": "awesome-ngb:build"
           }
         },
         "test": {
@@ -123,7 +123,7 @@
         }
       }
     },
-    "ng6-e2e": {
+    "awesome-ngb-e2e": {
       "root": "e2e/",
       "projectType": "application",
       "architect": {
@@ -131,7 +131,7 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "ng6:serve"
+            "devServerTarget": "awesome-ngb:serve"
           }
         },
         "lint": {
@@ -146,5 +146,5 @@
       }
     }
   },
-  "defaultProject": "ng6"
+  "defaultProject": "awesome-ngb"
 }
