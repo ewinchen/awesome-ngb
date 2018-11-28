@@ -6,10 +6,8 @@ import { PostListComponent } from './post-list/post-list.component';
 import { PostComponent } from './post/post.component';
 import { PostPreviewComponent } from './post-list/post-preview/post-preview.component';
 import { CarouselComponent } from './post-list/carousel/carousel.component';
-import { NgrxComponent } from './ngrx/ngrx.component';
 import { DiComponent } from './di/di.component';
 import { ObComponent } from './di/ob.component';
-import { CounterService } from "./di/counter.service";
 import { ContainerComponent } from './di/container/container.component';
 
 @NgModule({
@@ -23,7 +21,6 @@ import { ContainerComponent } from './di/container/container.component';
     PostComponent,
     PostPreviewComponent,
     CarouselComponent,
-    NgrxComponent,
     DiComponent,
     ContainerComponent,
     ObComponent

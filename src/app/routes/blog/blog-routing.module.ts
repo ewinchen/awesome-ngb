@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { PostListComponent } from './posts/post-list/post-list.component';
 import { PostComponent } from './posts/post/post.component';
-import { NgrxComponent } from './posts/ngrx/ngrx.component';
 import { AboutComponent } from './about/about.component';
 import { BlogLayoutComponent } from '../../layout/blog-layout/blog-layout.component';
 import { DiComponent } from "./posts/di/di.component";
@@ -30,10 +29,6 @@ const routes: Routes = [
       {
         path: 'posts/post/:id',
         component: PostComponent
-      },
-      {
-        path: 'posts/ngrx',
-        component: NgrxComponent
       },
       {
         path: 'posts/dimain',

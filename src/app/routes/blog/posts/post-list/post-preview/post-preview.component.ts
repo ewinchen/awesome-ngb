@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Store, select } from "@ngrx/store";
 import { Observable } from 'rxjs';
+import { CounterService } from '../../di/counter.service';
 
 interface AppState {
   count: number;
@@ -18,8 +18,8 @@ export class PostPreviewComponent implements OnInit {
 
   count$: Observable<number>;
 
-  constructor(store: Store<AppState>) {
-    this.count$ = store.pipe(select('count'));
+  constructor(counterService: CounterService) {
+    this.count$ = counterService.count$;
   }
 
   ngOnInit() {

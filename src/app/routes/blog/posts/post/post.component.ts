@@ -3,11 +3,7 @@ import { Router, ActivatedRoute } from '@angular/router';
 import { Post } from './post';
 import { PostService } from './post.service';
 import { Subscription, Observable } from 'rxjs';
-import { Store, select } from "@ngrx/store";
-
-interface AppState {
-  count: number;
-}
+import { CounterService } from '../di/counter.service';
 
 @Component({
   selector: 'app-post',
@@ -24,12 +20,12 @@ export class PostComponent implements OnInit, OnDestroy {
   constructor(private router: Router,
     private route: ActivatedRoute,
     private postService: PostService,
-    private store: Store<AppState>) { }
+    private counterService: CounterService) { }
 
   ngOnInit() {
     this.fetchPostSub = this.postService.fetchPost().subscribe(post => this.post = post);
     this.fetchPost$ = this.postService.fetchPost();
-    this.count$ = this.store.pipe(select('count'));
+    this.count$ = this.counterService.count$;
   }
 
   ngOnDestroy() {
