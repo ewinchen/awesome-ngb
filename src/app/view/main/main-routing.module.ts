@@ -4,7 +4,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { HelloComponent } from './hello/hello.component';
 import { GoodbyeComponent } from './goodbye/goodbye.component';
 
-import { MainLayoutComponent } from '../../layout/main-layout/main-layout.component';
+import { MainLayoutComponent } from './shared/main-layout/main-layout.component';
 import { HungeryComponent } from './eager/hungery/hungery.component';
 
 const routes: Routes = [
@@ -36,7 +36,7 @@ const routes: Routes = [
       },
       {
         path: 'lazy',
-        loadChildren: 'src/app/routes/main/lazy/lazy.module#LazyModule'
+        loadChildren: './lazy/lazy.module#LazyModule'
       },
     ]
   },

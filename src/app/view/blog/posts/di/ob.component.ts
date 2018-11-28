@@ -7,10 +7,7 @@ import { Observable } from 'rxjs';
   selector: 'app-ob',
   template: `
     <p>
-      counter number
-    </p>
-    <p>
-      {{count$ | async}}
+      Observable Current Count:  {{count$ | async}}
     </p>
   `,
   styles: []

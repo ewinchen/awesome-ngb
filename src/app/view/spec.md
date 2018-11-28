@@ -24,4 +24,4 @@
 
 一个是你很懒，那就把路由配置交给我，我来自己导航吧！
 
-* 有一种情况，就是子component是否应该放在父component的目录下呢？根据Component的所属Module在Component文件夹的同级目录下这个原则，我建议是把子component放在父component的同一个目录下，跟父component同一级别，这样component跟Module的关系更清晰
+* 有一种情况，就是子component是否应该放在父component的目录下呢？根据Component的所属Module在Component文件夹的同级目录下这个原则，我建议是把子component放在父component的同一个目录下，跟父component同一级别，这样component跟Module的关系更清晰 --- 有待商榷，参考layout，父子结构还是很重要的

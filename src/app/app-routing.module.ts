@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { NotFoundComponent } from './not-found/not-found.component';
+import { NotFoundComponent } from './view/not-found/not-found.component';
 
 const routes: Routes = [
   {
@@ -11,11 +11,11 @@ const routes: Routes = [
   },
   {
     path: 'blog',
-    loadChildren: 'src/app/routes/blog/blog.module#BlogModule'
+    loadChildren: './view/blog/blog.module#BlogModule'
   },
   {
     path: 'main',
-    loadChildren: 'src/app/routes/main/main.module#MainModule'
+    loadChildren: './view/main/main.module#MainModule'
   },
   {
     path: '**',
@@ -30,4 +30,4 @@ const routes: Routes = [
   ],
   exports: [RouterModule]
 })
-export class RoutesRoutingModule { }
+export class AppRoutingModule { }

@@ -7,7 +7,7 @@ import { MainRoutingModule } from './main-routing.module';
 import { HelloComponent } from './hello/hello.component';
 import { GoodbyeComponent } from './goodbye/goodbye.component';
 
-import { LayoutModule } from '../../layout/layout.module';
+import { MainLayoutModule } from './shared/main-layout/main-layout.module';
 import { EagerModule } from './eager/eager.module';
 
 
@@ -17,7 +17,7 @@ import { EagerModule } from './eager/eager.module';
     MainRoutingModule,
     SharedModule,
 
-    LayoutModule,
+    MainLayoutModule,
     EagerModule
   ],
   declarations: [

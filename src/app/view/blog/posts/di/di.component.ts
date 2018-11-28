@@ -5,12 +5,16 @@ import { Observable } from 'rxjs';
 @Component({
   selector: 'app-di',
   template: `
-    <button (click)="increment()">Increment</button>
+    <button class="btn btn-success" (click)="increment()">Increment</button>
+    <button class="btn btn-success" (click)="decrement()">Decrement</button>
+    <button class="btn btn-success" (click)="reset()">Reset Counter</button>
     <div>Current Count: {{ count$ | async }}</div>
-    <button (click)="decrement()">Decrement</button>
-    <button (click)="reset()">Reset Counter</button>
   `,
-  styles: []
+  styles: [`
+    button {
+      margin-right: 10px;
+    }
+  `]
 })
 export class DiComponent implements OnInit {
 

@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { SharedModule } from '../../shared/shared.module';
 
-import { LayoutModule } from '../../layout/layout.module';
+import { BlogLayoutModule } from './shared/blog-layout/blog-layout.module';
 
 import { BlogRoutingModule } from './blog-routing.module';
 import { PostsModule } from './posts/posts.module';
@@ -15,7 +15,7 @@ import { CounterService } from "./posts/di/counter.service";
   imports: [
     CommonModule,
     BlogRoutingModule,
-    LayoutModule,
+    BlogLayoutModule,
     SharedModule,
     PostsModule
   ],
